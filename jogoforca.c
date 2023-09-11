@@ -22,7 +22,7 @@ void addWordToDatabase(){
     file = fopen("palavrasescondidas.txt", "a");
     char word[256];
     fflush(stdin);
-    printf("Qual palavra você deseja adicionar?\n\n\nDigite aqui sua resposta ====> ");
+    printf("Qual palavra vocÃª deseja adicionar?\n\n\nDigite aqui sua resposta  ");
     scanf("%s", word);
     fprintf(file, "\n%s", word);
     fclose(file);
@@ -82,7 +82,7 @@ void modifyWordInDatabase() {
     scanf("%d", &modifyChoice);
     clearScreen();
     displayHeader();
-    printf("Por qual palavra deseja substituir?\n\n\nDigite aqui ====> ");
+    printf("Por qual palavra deseja substituir?\n\n\nDigite aqui  ");
     scanf("%s", newWord);
     file = fopen("palavrasescondidas.txt", "r");
     FILE* tempFile = fopen("palavrasescondidas.txt", "w");
@@ -199,7 +199,7 @@ void playHangman() {
         printf("Letras que errou: %s\n\n", incorrectLetters);
         printf("%s\n", correctLetters);
         
-    } while (errors < 7 && correctGuesses < letterCount);
+    } while (errors <= 7 && correctGuesses < letterCount);
 }
 
 int main() {
@@ -215,7 +215,7 @@ int main() {
         switch(menu) {
             case 1:
                 playHangman();
-                printf("Deseja voltar para o menu principal?\n1) Sim\n2) Não\n\n\nDigite sua resposta aqui ====> ");
+                printf("Deseja voltar para o menu principal?\n1) Sim\n2) NÃ£o\n\n\nDigite sua resposta aqui ====> ");
                 scanf("%d", &choice);
                 if (choice == 1) {
                     main();
@@ -225,7 +225,7 @@ int main() {
                 modifyWordInDatabase();
                 clearScreen();
                 displayHeader();
-                printf("Deseja voltar para o menu principal?\n1) Sim\n2) Não\n\n\nDigite sua resposta aqui ====> ");
+                printf("Deseja voltar para o menu principal?\n1) Sim\n2) NÃ£o\n\n\nDigite sua resposta aqui ====> ");
                 scanf("%d", &choice);
                 if (choice == 1) {
                     main();
@@ -235,7 +235,7 @@ int main() {
                 deleteWordFromDatabase();
                 clearScreen();
                 displayHeader();
-                printf("Deseja voltar para o menu principal?\n1) Sim\n2) Não\n\n\nDigite sua resposta aqui ====> ");
+                printf("Deseja voltar para o menu principal?\n1) Sim\n2) NÃ£o\n\n\nDigite sua resposta aqui ====> ");
                 scanf("%d", &choice);
                 if (choice == 1) {
                     main();
@@ -245,7 +245,7 @@ int main() {
                 addWordToDatabase();
                 clearScreen();
                 displayHeader();
-                printf("Deseja voltar para o menu principal?\n1) Sim\n2) Não\n\n\nDigite sua resposta aqui ====> ");
+                printf("Deseja voltar para o menu principal?\n1) Sim\n2) NÃ£o\n\n\nDigite sua resposta aqui ====> ");
                 scanf("%d", &choice);
                 if (choice == 1) {
                     main();
