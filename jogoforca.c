@@ -44,7 +44,7 @@ void deleteWordFromDatabase(){
         printf("%d) %s\n", i+1, word);
     }
     fclose(file);
-    printf("\nDigite sua resposta aqui ====> ");
+    printf("\nDigite sua resposta aqui:");
     scanf("%d", &deleteChoice);
     file = fopen("palavrasescondidas.txt","r");
     FILE* tempFile = fopen("palavrasescondidas.txt", "w");
@@ -77,7 +77,7 @@ void modifyWordInDatabase() {
         printf("%d) %s\n", i+1, word);
     }
     fclose(file);
-    printf("\nDigite aqui sua resposta ====> ");
+    printf("\nDigite aqui sua resposta:");
     scanf("%d", &modifyChoice);
     clearScreen();
     displayHeader();
@@ -185,7 +185,6 @@ void playHangman() {
         clearScreen();
         displayHeader();
         
-        // desenho
         printf(" -------------\n");
         printf(" |           |\n");
         printf(" |           %s\n", ((bodyCounter >= 1)? "O" : " "));
