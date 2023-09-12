@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
-#include <ctype.h>
 #include <time.h>
 
 void displayHeader() {
